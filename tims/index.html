@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>奖品详情</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script src="js/remshipei.js"></script>
+</head>
+<body>
+	<div class="logo_contain">
+		<img src="imgs/logo.png" height="118" width="84" alt="">
+	</div>
+	<div class="font_contain">
+		<img src="imgs/font.png" height="154" width="312" alt="">
+	</div>
+	<div class="time">
+		<div class="hour">
+			10
+		</div>
+		<div class="partition_number">
+			<img src="imgs/partition_number.png " height="44" width="14" alt="">
+		</div>
+		<div class="min">
+			20
+		</div>
+		<div class="partition_number">
+			<img src="imgs/partition_number.png " height="44" width="14" alt="">
+		</div>
+		<div class="sec">
+			30
+		</div>
+	</div>
+</body>
+</html>
+<!-- <script>
+	var date1= '2017/05/23 00:00:00';  //开始时间
+	var date2 = new Date();    //结束时间
+	var date3 =  Math.round( (new Date(date1).getTime() - date2.getTime())/1000 );   //时间差的毫秒数
+	/*$(document).ready(function() { */
+		$(function(){
+			function jump(count) {
+				window.setTimeout(function(){
+					count--;
+					if(count > 2) {
+						jump(count);
+					} else {
+						window.location.href="https://www.baidu.com/";
+					}
+					}, 1000);
+				}
+			jump( date3 );
+		})
+	var starttime = new Date("2017/5/23");
+		var f =  setInterval(function () {
+			var nowtime = new Date();
+			var time = starttime - nowtime;
+			var day = parseInt(time / 1000 / 60 / 60 / 24);
+			var hour = parseInt(time / 1000 / 60 / 60);
+			if(hour<10){
+				hour = '0'+hour;
+			}
+			var minute = parseInt(time / 1000 / 60 % 60);
+			if(minute<10){
+				minute = '0'+minute;
+			}
+			var seconds = parseInt(time / 1000 % 60);
+			if(seconds<10){
+				seconds = '0'+seconds;
+			}
+			if(seconds<0){
+				window.clearInterval(f);
+				window.location.href="https://www.baidu.com/";
+			}
+			$('.hour').html(hour);
+			$('.min').html(minute);
+			$('.sec').html(seconds);
+	}, 1000);
+</script> -->
